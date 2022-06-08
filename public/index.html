@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choloropleth Map of US Higher Education Levels</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="index.js" type="module" defer></script>
+    <script>
+        // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCNy6bbQbWG0wF5gj51td0xKsTZZJv5hKY",
+  authDomain: "us-education-map.firebaseapp.com",
+  projectId: "us-education-map",
+  storageBucket: "us-education-map.appspot.com",
+  messagingSenderId: "36750667448",
+  appId: "1:36750667448:web:de25b1deb497baa505ce4d",
+  measurementId: "G-ZJV6LMWYNF"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+    </script>
+</head>
+<body>
+    <div id="app-container" class="app-container">
+        <h1 id="title" class="title">United States Educational Attainment</h1>
+        <p id="description" class="description">Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)</p>
+        <div id="graph-container"></div>
+    </div>
+</body>
+</html>
